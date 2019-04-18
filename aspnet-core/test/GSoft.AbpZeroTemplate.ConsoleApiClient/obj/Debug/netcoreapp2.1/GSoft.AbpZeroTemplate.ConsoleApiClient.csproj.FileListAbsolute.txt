@@ -1,0 +1,16 @@
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.deps.json
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.runtimeconfig.json
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.runtimeconfig.dev.json
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.dll
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.pdb
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.Application.Shared.dll
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.Core.Shared.dll
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.Application.Shared.pdb
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\bin\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.Core.Shared.pdb
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.csprojAssemblyReference.cache
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.csproj.CoreCompileInputs.cache
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.AssemblyInfoInputs.cache
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.AssemblyInfo.cs
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.csproj.CopyComplete
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.dll
+D:\Study\CNPM chuyên sâu\CNPMCS\aspnet-core\test\GSoft.AbpZeroTemplate.ConsoleApiClient\obj\Debug\netcoreapp2.1\GSoft.AbpZeroTemplate.ConsoleApiClient.pdb

@@ -1551,6 +1551,138 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("AppUserRoles");
                 });
 
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Asset", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<float>("AnnualDepreciationRate");
+
+                    b.Property<int>("CateID");
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<string>("DepartmentsNeedFollow");
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("LiquidationDate");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("ProviderID");
+
+                    b.Property<string>("PurchaseDate");
+
+                    b.Property<float>("PurchasePrice");
+
+                    b.Property<float>("ResidualPrice");
+
+                    b.Property<string>("SerialNumber");
+
+                    b.Property<string>("Status");
+
+                    b.Property<float>("TotalMaintenanceCosts");
+
+                    b.Property<float>("TotalRepairCost");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("WarrantyEndDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Assets");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.AssetDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AssetID");
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Price");
+
+                    b.Property<string>("Specification");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AssetDetails");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Note");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categorys");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address");
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<string>("Info");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+                });
+
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.DemoModel", b =>
                 {
                     b.Property<int>("Id")
@@ -1609,6 +1741,66 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.HasIndex("ParentId");
 
                     b.ToTable("Functions");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Liquidation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ContractCode");
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<string>("Date");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("LiquidatorName");
+
+                    b.Property<string>("TotalAsset");
+
+                    b.Property<string>("TotalPrice");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Liquidations");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.LiquidationDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AssetID");
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("LiquidationID");
+
+                    b.Property<string>("LiquidationPrice");
+
+                    b.Property<string>("Note");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LiquidationDetails");
                 });
 
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.MenuClient", b =>
@@ -1695,6 +1887,39 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("GPermissions");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Povider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address");
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Info");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Phone");
+
+                    b.Property<string>("TaxCode");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Poviders");
                 });
 
             modelBuilder.Entity("GSoft.AbpZeroTemplate.Editions.SubscribableEdition", b =>

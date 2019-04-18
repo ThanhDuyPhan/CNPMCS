@@ -13,15 +13,14 @@ using GSoft.AbpZeroTemplate.MultiTenancy;
 
 namespace GSoft.AbpZeroTemplate.Migrator
 {
-
     public class MultiTenantMigrateExecuter : ITransientDependency
     {
         public Log Log { get; private set; }
-        
+
         private readonly AbpZeroDbMigrator _migrator;
         private readonly IRepository<Tenant> _tenantRepository;
         private readonly IDbPerTenantConnectionStringResolver _connectionStringResolver;
-        
+
         public MultiTenantMigrateExecuter(
             AbpZeroDbMigrator migrator, 
             IRepository<Tenant> tenantRepository,
@@ -32,7 +31,7 @@ namespace GSoft.AbpZeroTemplate.Migrator
 
             _migrator = migrator;
             _tenantRepository = tenantRepository;
-            _connectionStringResolver = connectionStringResolver; 
+            _connectionStringResolver = connectionStringResolver;
         }
 
         public void Run(bool skipConnVerification)
