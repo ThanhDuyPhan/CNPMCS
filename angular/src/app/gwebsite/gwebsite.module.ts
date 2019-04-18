@@ -19,6 +19,11 @@ import { CustomerComponent } from './customer/customer.component';
 import { ViewCustomerModalComponent } from './customer/view-customer-modal.component';
 import { CreateOrEditCustomerModalComponent } from './customer/create-or-edit-customer-modal.component';
 
+// qlts
+import { CategoryComponent } from './category/category.component';
+import { ViewCategoryModalComponent } from './category/view-category-modal.component';
+import { CreateOrEditCategoryModalComponent } from './category/create-or-edit-category-modal.component';
+
 @NgModule({
     imports: [
         FormsModule,
@@ -42,10 +47,10 @@ import { CreateOrEditCustomerModalComponent } from './customer/create-or-edit-cu
         MenuClientComponent, CreateOrEditMenuClientModalComponent,
         DemoModelComponent, CreateOrEditDemoModelModalComponent, ViewDemoModelModalComponent,
         CustomerComponent, CreateOrEditCustomerModalComponent, ViewCustomerModalComponent,
+        CategoryComponent, CreateOrEditCategoryModalComponent, ViewCategoryModalComponent,
     ],
     providers: [
-        DemoModelServiceProxy,
-        CustomerServiceProxy
+        DemoModelServiceProxy
     ]
 })
 export class GWebsiteModule { }

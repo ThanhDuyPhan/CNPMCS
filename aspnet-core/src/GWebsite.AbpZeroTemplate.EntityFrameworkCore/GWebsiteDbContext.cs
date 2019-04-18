@@ -28,8 +28,8 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         /// <summary>
         /// add database qlts
         /// </summary>
-        public virtual DbSet<Category> Categorys { get; set; }
-        public virtual DbSet<Povider> Poviders { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Provider> Providers { get; set; }
         public virtual DbSet<Asset> Assets { get; set; }
         public virtual DbSet<AssetDetail> AssetDetails { get; set; }
         public virtual DbSet<Liquidation> Liquidations { get; set; }
