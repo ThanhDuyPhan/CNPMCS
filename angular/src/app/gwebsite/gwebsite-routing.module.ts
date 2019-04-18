@@ -5,6 +5,7 @@ import { DemoModelComponent } from './demo-model/demo-model.component';
 import { CustomerComponent } from './customer/customer.component';
 //qlts
 import { CategoryComponent } from './category/category.component';
+import { AssetComponent } from './asset/asset.component';
 
 @NgModule({
     imports: [
@@ -42,6 +43,15 @@ import { CategoryComponent } from './category/category.component';
                     {
                         path: 'category', component: CategoryComponent,
                         data: { permission: 'Pages.Administration.Category' }
+                    },
+                ]
+            },
+            {
+                path: '',
+                children: [
+                    {
+                        path: 'asset', component: AssetComponent,
+                        data: { permission: 'Pages.Administration.Asset' }
                     },
                 ]
             }

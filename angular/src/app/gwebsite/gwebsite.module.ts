@@ -24,6 +24,10 @@ import { CategoryComponent } from './category/category.component';
 import { ViewCategoryModalComponent } from './category/view-category-modal.component';
 import { CreateOrEditCategoryModalComponent } from './category/create-or-edit-category-modal.component';
 
+import { AssetComponent } from './asset/asset.component';
+import { ViewAssetModalComponent } from './asset/view-asset-modal.component';
+import { CreateOrEditAssetModalComponent } from './asset/create-or-edit-asset-modal.component';
+
 @NgModule({
     imports: [
         FormsModule,
@@ -48,6 +52,7 @@ import { CreateOrEditCategoryModalComponent } from './category/create-or-edit-ca
         DemoModelComponent, CreateOrEditDemoModelModalComponent, ViewDemoModelModalComponent,
         CustomerComponent, CreateOrEditCustomerModalComponent, ViewCustomerModalComponent,
         CategoryComponent, CreateOrEditCategoryModalComponent, ViewCategoryModalComponent,
+        AssetComponent, CreateOrEditAssetModalComponent, ViewAssetModalComponent,
     ],
     providers: [
         DemoModelServiceProxy

@@ -1,0 +1,85 @@
+<div bsModal #viewModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="viewModal"
+aria-hidden="true" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span *ngIf="asset.id">{{l("EditAsset")}}: {{asset.name}}</span>
+                    <span *ngIf="!asset.id">{{l("CreateNewAsset")}}</span>
+                </h4>
+                <button type="button" class="close" (click)="close()" [attr.aria-label]="l('Close')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Tên tài sản</label>
+                    <p>{{asset.name}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Mã danh mục</label>
+                    <p>{{asset.cateid}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Mã nhà cung cấp</label>
+                    <p>{{asset.providerid}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Số serial</label>
+                    <p>{{asset.serialnumber}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Tình trạng</label>
+                    <p>{{asset.status}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Ngày mua tài sản</label>
+                    <p>{{asset.purchasedate}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Ngày kết thúc bảo hành</label>
+                    <p>{{asset.warrantyenddate}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Ngày thanh lý</label>
+                    <p>{{asset.liquidationdate}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Giá trị đầu tiên</label>
+                    <p>{{asset.purchaseprice}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Tỉ lệ khấu hao hằng năm</label>
+                    <p>{{asset.annualdepreciationrate}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Giá trị còn lại</label>
+                    <p>{{asset.sesidualprice}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Phòng cần theo dõi</label>
+                    <p>{{asset.departmentsneedfollow}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Tổng tiền bảo hành</label>
+                    <p>{{asset.totalmaintenancecosts}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Tổng tiền sửa chữa</label>
+                    <p>{{asset.totalrepaircost}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Mô tả</label>
+                    <p>{{asset.description}}</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button [disabled]="saving" type="button" class="btn btn-default"
+                    (click)="close()">{{l("Cancel")}}</button>
+                <button type="submit" class="btn btn-primary" [buttonBusy]="saving"
+                    [busyText]="l('SavingWithThreeDot')"><i class="fa fa-save"></i>
+                    <span>{{l("Save")}}</span></button>
+            </div>
+        </div>
+    </div>
+</div>
