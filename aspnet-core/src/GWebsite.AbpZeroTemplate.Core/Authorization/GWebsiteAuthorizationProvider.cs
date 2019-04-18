@@ -46,6 +46,21 @@ namespace GWebsite.AbpZeroTemplate.Core.Authorization
             provider.CreateChildPermission(GWebsitePermissions.Pages_Administration_Provider_Edit, L("EditingProvider"));
             provider.CreateChildPermission(GWebsitePermissions.Pages_Administration_Provider_Delete, L("DeletingProvider"));
 
+            var assetdetail = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_AssetDetail, L("AssetDetail"));
+            assetdetail.CreateChildPermission(GWebsitePermissions.Pages_Administration_AssetDetail_Create, L("CreatingNewAssetDetail"));
+            assetdetail.CreateChildPermission(GWebsitePermissions.Pages_Administration_AssetDetail_Edit, L("EditingAssetDetail"));
+            assetdetail.CreateChildPermission(GWebsitePermissions.Pages_Administration_AssetDetail_Delete, L("DeletingAssetDetail"));
+
+            var liquidation = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_Liquidation, L("Liquidation"));
+            liquidation.CreateChildPermission(GWebsitePermissions.Pages_Administration_Liquidation_Create, L("CreatingNewLiquidation"));
+            liquidation.CreateChildPermission(GWebsitePermissions.Pages_Administration_Liquidation_Edit, L("EditingLiquidation"));
+            liquidation.CreateChildPermission(GWebsitePermissions.Pages_Administration_Liquidation_Delete, L("DeletingLiquidation"));
+
+            var liquidationdetail = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_LiquidationDetail, L("LiquidationDetail"));
+            liquidationdetail.CreateChildPermission(GWebsitePermissions.Pages_Administration_LiquidationDetail_Create, L("CreatingNewLiquidationDetail"));
+            liquidationdetail.CreateChildPermission(GWebsitePermissions.Pages_Administration_LiquidationDetail_Edit, L("EditingLiquidationDetail"));
+            liquidationdetail.CreateChildPermission(GWebsitePermissions.Pages_Administration_LiquidationDetail_Delete, L("DeletingLiquidationDetail"));
+
         }
 
         private static ILocalizableString L(string name)

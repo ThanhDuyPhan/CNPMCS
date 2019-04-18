@@ -1,6 +1,9 @@
 using AutoMapper;
 using GWebsite.AbpZeroTemplate.Application.Share.Customers.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.Providers.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.AssetDetails.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.Liquidations.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.LiquidationDetails.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.DemoModels.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.MenuClients.Dto;
 using GWebsite.AbpZeroTemplate.Core.Models;
@@ -28,11 +31,29 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<Customer, CustomerInput>();
             configuration.CreateMap<Customer, CustomerForViewDto>();
 
-            //provider
+            //Provider
             configuration.CreateMap<Provider, ProviderDto>();
             configuration.CreateMap<ProviderInput, Provider>();
             configuration.CreateMap<Provider, ProviderInput>();
             configuration.CreateMap<Provider, ProviderForViewDto>();
+
+            //AssetDetail
+            configuration.CreateMap<AssetDetail, AssetDetailDto>();
+            configuration.CreateMap<AssetDetailInput, AssetDetail>();
+            configuration.CreateMap<AssetDetail, AssetDetailInput>();
+            configuration.CreateMap<AssetDetail, AssetDetailForViewDto>();
+
+            //Liquidation
+            configuration.CreateMap<Liquidation, LiquidationDto>();
+            configuration.CreateMap<LiquidationInput, Liquidation>();
+            configuration.CreateMap<Liquidation, LiquidationInput>();
+            configuration.CreateMap<Liquidation, LiquidationForViewDto>();
+
+            //LiquidationDetail
+            configuration.CreateMap<LiquidationDetail, LiquidationDetailDto>();
+            configuration.CreateMap<LiquidationDetailInput, LiquidationDetail>();
+            configuration.CreateMap<LiquidationDetail, LiquidationDetailInput>();
+            configuration.CreateMap<LiquidationDetail, LiquidationDetailForViewDto>();
         }
     }
 }
