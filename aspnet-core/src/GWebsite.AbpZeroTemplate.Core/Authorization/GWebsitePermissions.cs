@@ -19,10 +19,10 @@
         public const string Pages_Administration_DemoModel_Edit = "Pages.Administration.DemoModel.Edit";
         public const string Pages_Administration_DemoModel_Delete = "Pages.Administration.DemoModel.Delete";
 
-        public const string Pages_Administration_Customer = "Pages.Administration.Customer";
-        public const string Pages_Administration_Customer_Create = "Pages.Administration.Customer.Create";
-        public const string Pages_Administration_Customer_Edit = "Pages.Administration.Customer.Edit";
-        public const string Pages_Administration_Customer_Delete = "Pages.Administration.Customer.Delete";
+        public const string Pages_Administration_Provider = "Pages.Administration.Provider";
+        public const string Pages_Administration_Provider_Create = "Pages.Administration.Provider.Create";
+        public const string Pages_Administration_Provider_Edit = "Pages.Administration.Provider.Edit";
+        public const string Pages_Administration_Provider_Delete = "Pages.Administration.Provider.Delete";
 
     }
 }

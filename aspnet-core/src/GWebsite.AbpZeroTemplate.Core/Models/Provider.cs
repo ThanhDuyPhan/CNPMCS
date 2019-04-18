@@ -9,7 +9,7 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
     /// <summary>
     /// Entity nhà cung cấp
     /// </summary>
-    public class Povider : FullAuditModel
+    public class Provider : FullAuditModel
     {
         //tên nhà cung cấp
         public string Name { get; set; }
