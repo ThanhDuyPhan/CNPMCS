@@ -22,80 +22,87 @@ aria-labelledby="createOrEditModal" aria-hidden="true" [config]="{backdrop: 'sta
                     <div class="form-group">
                         <label>Mã danh mục *</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="CateID"
-                            [(ngModel)]="asset.cateid" required min="1">
-                        <validation-messages [formCtrl]="cateidInput"></validation-messages>
+                            [(ngModel)]="asset.cateID" required min="1">
+                        <validation-messages [formCtrl]="cateIDInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Mã nhà cung cấp *</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="ProviderID"
-                            [(ngModel)]="asset.providerid" required min="1">
-                        <validation-messages [formCtrl]="provideridInput"></validation-messages>
+                            [(ngModel)]="asset.providerID" required min="1">
+                        <validation-messages [formCtrl]="providerIDInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Số serial *</label>
                         <input #noteInput="ngModel" class="form-control" type="text" name="SerialNumber"
-                            [(ngModel)]="asset.serialnumber" required maxlength="64">
-                        <validation-messages [formCtrl]="serialnumberInput"></validation-messages>
+                            [(ngModel)]="asset.serialNumber" required maxlength="64">
+                        <validation-messages [formCtrl]="serialNumberInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Tình trạng *</label>
-                        <input #noteInput="ngModel" class="form-control" type="text" name="Status"
+                        
+                        <select #noteInput="ngModel" required [(ngModel)]='asset.status' class='form-control' name="Status">
+                            <option value='1'>Tốt</option>
+                            <option value='2'>Hỏng</option>
+                            <option value='3'>Đã thanh lý</option>
+                        </select>
+
+                        <!-- <input #noteInput="ngModel" class="form-control" type="text" name="Status"
                             [(ngModel)]="asset.status" required maxlength="64">
-                        <validation-messages [formCtrl]="statusInput"></validation-messages>
+                        <validation-messages [formCtrl]="statusInput"></validation-messages> -->
                     </div>
                     <div class="form-group">
                         <label>Ngày mua tài sản *</label>
-                        <input #noteInput="ngModel" class="form-control" type="text" name="PurchaseDate"
-                            [(ngModel)]="asset.purchasedate" required maxlength="64">
-                        <validation-messages [formCtrl]="purchasedateInput"></validation-messages>
+                        <input #noteInput="ngModel" class="form-control" type="date" name="PurchaseDate"
+                            [(ngModel)]="asset.purchaseDate" required>
+                        <validation-messages [formCtrl]="purchaseDateInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Ngày kết thúc bảo hành *</label>
-                        <input #noteInput="ngModel" class="form-control" type="text" name="WarrantyEndDate"
-                            [(ngModel)]="asset.warrantyenddate" required maxlength="64">
-                        <validation-messages [formCtrl]="warrantyenddateInput"></validation-messages>
+                        <input #noteInput="ngModel" class="form-control" type="date" name="WarrantyEndDate"
+                            [(ngModel)]="asset.warrantyEndDate" required maxlength="64">
+                        <validation-messages [formCtrl]="warrantyEndDateInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Ngày thanh lý</label>
-                        <input #noteInput="ngModel" class="form-control" type="text" name="LiquidationDate"
-                            [(ngModel)]="asset.liquidationdate" maxlength="64">
-                        <validation-messages [formCtrl]="liquidationdateInput"></validation-messages>
+                        <input #noteInput="ngModel" class="form-control" type="date" name="LiquidationDate"
+                            [(ngModel)]="asset.liquidationDate" maxlength="64">
+                        <validation-messages [formCtrl]="liquidationDateInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Giá trị đầu tiên *</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="PurchasePrice"
-                            [(ngModel)]="asset.purchaseprice" required>
-                        <validation-messages [formCtrl]="purchasepriceInput"></validation-messages>
+                            [(ngModel)]="asset.purchasePrice" required>
+                        <validation-messages [formCtrl]="purchasePriceInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Tỉ lệ khấu hao hằng năm *</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="AnnualDepreciationRate"
-                            [(ngModel)]="asset.annualdepreciationrate" required>
-                        <validation-messages [formCtrl]="annualdepreciationrateInput"></validation-messages>
+                            [(ngModel)]="asset.annualDepreciationRate" required>
+                        <validation-messages [formCtrl]="annualDepreciationRateInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Giá trị còn lại</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="ResidualPrice"
-                            [(ngModel)]="asset.sesidualprice">
-                        <validation-messages [formCtrl]="sesidualpriceInput"></validation-messages>
+                            [(ngModel)]="asset.residualPrice">
+                        <validation-messages [formCtrl]="residualPriceInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Phòng cần theo dõi *</label>
                         <input #noteInput="ngModel" class="form-control" type="text" name="DepartmentsNeedFollow"
-                            [(ngModel)]="asset.departmentsneedfollow" required maxlength="255">
-                        <validation-messages [formCtrl]="departmentsneedfollowInput"></validation-messages>
+                            [(ngModel)]="asset.departmentsNeedFollow" required maxlength="255">
+                        <validation-messages [formCtrl]="departmentsNeedFollowInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Tổng tiền bảo hành</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="TotalMaintenanceCosts"
-                            [(ngModel)]="asset.totalmaintenancecosts">
-                        <validation-messages [formCtrl]="totalmaintenancecostsInput"></validation-messages>
+                            [(ngModel)]="asset.totalMaintenanceCosts">
+                        <validation-messages [formCtrl]="totalMaintenanceCostsInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Tổng tiền sửa chữa</label>
                         <input #noteInput="ngModel" class="form-control" type="number" name="TotalRepairCost"
-                            [(ngModel)]="asset.totalrepaircost" maxlength="64">
-                        <validation-messages [formCtrl]="totalrepaircostInput"></validation-messages>
+                            [(ngModel)]="asset.totalRepairCost" maxlength="64">
+                        <validation-messages [formCtrl]="totalRepairCostInput"></validation-messages>
                     </div>
                     <div class="form-group">
                         <label>Mô tả *</label>

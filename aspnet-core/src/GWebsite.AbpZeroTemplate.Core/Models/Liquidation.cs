@@ -16,7 +16,7 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
         // số hợp đồng
         public string ContractCode { get; set; }
         // ngày thanh lý
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         // tổng tài sản thanh lý
         public string TotalAsset { get; set; }
         // tổng giá tiền thanh lý

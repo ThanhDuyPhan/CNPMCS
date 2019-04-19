@@ -22,11 +22,11 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
         //tình trạng tài sản
         public string Status { get; set; }
         //ngày mua tài sản
-        public string PurchaseDate { get; set; }
+        public DateTime PurchaseDate { get; set; }
         //ngày kết thúc bảo hành
-        public string WarrantyEndDate { get; set; }
+        public DateTime WarrantyEndDate { get; set; }
         //ngày thanh lý
-        public string LiquidationDate { get; set; }
+        public DateTime LiquidationDate { get; set; }
         //giá trị đầu tiên(giá mua vào)
         public float PurchasePrice { get; set; }
         //tỉ lệ khấu hao hằng năm

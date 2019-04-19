@@ -26,7 +26,7 @@
                             <div class="col-sm-12">
                                 <div class="input-group">
                                     <input [(ngModel)]="assetName" name="assetName" autoFocus class="form-control"
-                                        placeholder="Nhập tên danh mục" type="text">
+                                        placeholder="Nhập tên tài sản" type="text">
                                     <span class="input-group-btn">
                                         <button (click)="applyFilters()" class="btn btn-primary" type="submit"><i
                                                 class="icon-refresh"></i>
@@ -49,43 +49,46 @@
                                         Tên tài sản
                                         <p-sortIcon field="name"></p-sortIcon>
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="cateid">
                                         Mã danh mục
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="providerid">
                                         Mã nhà cung cấp
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="serialnumber">
+                                        Số serial
+                                    </th>
+                                    <th pSortableColumn="status">
                                         Tình trạng
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="purchasedate">
                                         Ngày mua tài sản
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="warrantyenddate">
                                         Ngày kết thúc bảo hành
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="liquidationdate">
                                         Ngày thanh lý
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="purchaseprice">
                                         Giá trị đầu tiên
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="annualdepreciationrate">
                                         Tỉ lệ khấu hao hằng năm
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="sesidualprice">
                                         Giá trị còn lại
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="departmentsneedfollow">
                                         Phòng cần theo dõi
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="totalmaintenancecosts">
                                         Tổng tiền bảo hành
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="totalrepaircost">
                                         Tổng tiền sửa chữa
                                     </th>
-                                    <th pSortableColumn="note">
+                                    <th pSortableColumn="description">
                                         Mô tả
                                     </th>
                                     <th>{{l('Edit')}}</th>
@@ -99,55 +102,55 @@
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Mã danh mục</span>
-                                        <span title="{{record.cateid}}">{{truncateString(record.cateid)}}</span>
+                                        <span title="{{record.cateID}}">{{truncateString(record.cateID)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Mã nhà cung cấp</span>
-                                        <span title="{{record.providerid}}">{{truncateString(record.providerid)}}</span>
+                                        <span title="{{record.providerID}}">{{truncateString(record.providerID)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Số serial</span>
-                                        <span title="{{record.serialnumber}}">{{truncateString(record.serialnumber)}}</span>
+                                        <span title="{{record.serialNumber}}">{{truncateString(record.serialNumber)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Tình trạng</span>
-                                        <span title="{{record.status}}">{{truncateString(record.status)}}</span>
+                                        <span title="1">{{truncateString(record.status)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày mua tài sản</span>
-                                        <span title="{{record.purchasedate}}">{{truncateString(record.purchasedate)}}</span>
+                                        <span title="{{record.purchaseDate}}">{{truncateString(record.purchaseDate)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày kết thúc bảo hành</span>
-                                        <span title="{{record.warrantyenddate}}">{{truncateString(record.warrantyenddate)}}</span>
+                                        <span title="{{record.warrantyEndDate}}">{{truncateString(record.warrantyEndDate)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày thanh lý</span>
-                                        <span title="{{record.liquidationdate}}">{{truncateString(record.liquidationdate)}}</span>
+                                        <span title="{{record.liquidationDate}}">{{truncateString(record.liquidationDate)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Giá trị đầu tiên</span>
-                                        <span title="{{record.purchaseprice}}">{{truncateString(record.purchaseprice)}}</span>
+                                        <span title="{{record.purchasePrice}}">{{truncateString(record.purchasePrice)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Tỉ lệ khấu hao hằng năm</span>
-                                        <span title="{{record.annualdepreciationrate}}">{{truncateString(record.annualdepreciationrate)}}</span>
+                                        <span title="{{record.annualDepreciationRate}}">{{truncateString(record.annualDepreciationRate)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Giá trị còn lại</span>
-                                        <span title="{{record.sesidualprice}}">{{truncateString(record.sesidualprice)}}</span>
+                                        <span title="{{record.residualPrice}}">{{truncateString(record.residualPrice)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Phòng cần theo dõi</span>
-                                        <span title="{{record.departmentsneedfollow}}">{{truncateString(record.departmentsneedfollow)}}</span>
+                                        <span title="{{record.departmentsNeedFollow}}">{{truncateString(record.departmentsNeedFollow)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Tổng tiền bảo hành</span>
-                                        <span title="{{record.totalmaintenancecosts}}">{{truncateString(record.totalmaintenancecosts)}}</span>
+                                        <span title="{{record.totalMaintenanceCosts}}">{{truncateString(record.totalMaintenanceCosts)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Tổng tiền sửa chữa</span>
-                                        <span title="{{record.totalrepaircost}}">{{truncateString(record.totalrepaircost)}}</span>
+                                        <span title="{{record.totalRepairCost}}">{{truncateString(record.totalRepairCost)}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Mô tả</span>

@@ -56,7 +56,7 @@ export class AssetComponent extends AppComponentBase implements AfterViewInit, O
     * Hàm get danh sách Asset
     * @param event
     */
-    getCategories(event?: LazyLoadEvent) {
+    getAssets(event?: LazyLoadEvent) {
         if (!this.paginator || !this.dataTable) {
             return;
         }

@@ -11,7 +11,7 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
     /// </summary>
     public class AssetDetail : FullAuditModel
     {
-        //tên danh mục tài sản
+        //tên chi tiết tài sản
         public string Name { get; set; }
         //mã tài sản
         public string AssetID { get; set; }

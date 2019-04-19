@@ -6,6 +6,10 @@ import { CustomerComponent } from './customer/customer.component';
 //qlts
 import { CategoryComponent } from './category/category.component';
 import { AssetComponent } from './asset/asset.component';
+import { AssetDetailComponent } from './assetdetail/assetdetail.component';
+import { ProviderComponent } from './provider/provider.component';
+import { LiquidationComponent } from './liquidation/liquidation.component';
+import { LiquidationDetailComponent } from './liquidationdetail/liquidationdetail.component';
 
 @NgModule({
     imports: [
@@ -54,7 +58,43 @@ import { AssetComponent } from './asset/asset.component';
                         data: { permission: 'Pages.Administration.Asset' }
                     },
                 ]
-            }
+            },
+            {
+                path: '',
+                children: [
+                    {
+                        path: 'assetdetail', component: AssetDetailComponent,
+                        data: { permission: 'Pages.Administration.AssetDetail' }
+                    },
+                ]
+            },
+            {
+                path: '',
+                children: [
+                    {
+                        path: 'provider', component: ProviderComponent,
+                        data: { permission: 'Pages.Administration.Provider' }
+                    },
+                ]
+            },
+            {
+                path: '',
+                children: [
+                    {
+                        path: 'liquidation', component: LiquidationComponent,
+                        data: { permission: 'Pages.Administration.Liquidation' }
+                    },
+                ]
+            },
+            {
+                path: '',
+                children: [
+                    {
+                        path: 'liquidationdetail', component: LiquidationDetailComponent,
+                        data: { permission: 'Pages.Administration.LiquidationDetail' }
+                    },
+                ]
+            },
         ])
     ],
     exports: [

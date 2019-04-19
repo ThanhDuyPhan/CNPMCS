@@ -1571,13 +1571,13 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<bool>("IsDelete");
 
-                    b.Property<string>("LiquidationDate");
+                    b.Property<DateTime>("LiquidationDate");
 
                     b.Property<string>("Name");
 
                     b.Property<int>("ProviderID");
 
-                    b.Property<string>("PurchaseDate");
+                    b.Property<DateTime>("PurchaseDate");
 
                     b.Property<float>("PurchasePrice");
 
@@ -1595,7 +1595,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("UpdatedDate");
 
-                    b.Property<string>("WarrantyEndDate");
+                    b.Property<DateTime>("WarrantyEndDate");
 
                     b.HasKey("Id");
 
@@ -1755,7 +1755,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("CreatedDate");
 
-                    b.Property<string>("Date");
+                    b.Property<DateTime>("Date");
 
                     b.Property<bool>("IsDelete");
 
