@@ -27,7 +27,7 @@ export class LiquidationComponent extends AppComponentBase implements AfterViewI
     /**
     * tạo các biến dể filters
     */
-    liquidationName: string;
+    liquidatorName: string;
 
     constructor(
         injector: Injector,
@@ -72,8 +72,8 @@ export class LiquidationComponent extends AppComponentBase implements AfterViewI
 
     }
 
-    reloadList(liquidationName, event?: LazyLoadEvent) {
-        this._liquidationService.getLiquidationsByFilter(liquidationName, this.primengTableHelper.getSorting(this.dataTable),
+    reloadList(liquidatorName, event?: LazyLoadEvent) {
+        this._liquidationService.getLiquidationsByFilter(liquidatorName, this.primengTableHelper.getSorting(this.dataTable),
             this.primengTableHelper.getMaxResultCount(this.paginator, event),
             this.primengTableHelper.getSkipCount(this.paginator, event),
         ).subscribe(result => {
@@ -92,8 +92,8 @@ export class LiquidationComponent extends AppComponentBase implements AfterViewI
     init(): void {
         //get params từ url để thực hiện filter
         this._activatedRoute.params.subscribe((params: Params) => {
-            this.liquidationName = params['liquidatorname'] || '';
-            this.reloadList(this.liquidationName, null);
+            this.liquidatorName = params['liquidatorName'] || '';
+            this.reloadList(this.liquidatorName, null);
         });
     }
 
@@ -103,7 +103,7 @@ export class LiquidationComponent extends AppComponentBase implements AfterViewI
 
     applyFilters(): void {
         //truyền params lên url thông qua router
-        this.reloadList(this.liquidationName, null);
+        this.reloadList(this.liquidatorName, null);
 
         if (this.paginator.getPage() !== 0) {
             this.paginator.changePage(0);

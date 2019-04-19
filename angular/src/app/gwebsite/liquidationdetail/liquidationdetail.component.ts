@@ -27,7 +27,7 @@ export class LiquidationDetailComponent extends AppComponentBase implements Afte
     /**
      * tạo các biến dể filters
      */
-    liquidationdetailName: string;
+    LiquidationID: string;
 
     constructor(
         injector: Injector,
@@ -72,8 +72,8 @@ export class LiquidationDetailComponent extends AppComponentBase implements Afte
 
     }
 
-    reloadList(liquidationdetailName, event?: LazyLoadEvent) {
-        this._liquidationdetailService.getLiquidationDetailsByFilter(liquidationdetailName, this.primengTableHelper.getSorting(this.dataTable),
+    reloadList(LiquidationID, event?: LazyLoadEvent) {
+        this._liquidationdetailService.getLiquidationDetailsByFilter(LiquidationID, this.primengTableHelper.getSorting(this.dataTable),
             this.primengTableHelper.getMaxResultCount(this.paginator, event),
             this.primengTableHelper.getSkipCount(this.paginator, event),
         ).subscribe(result => {
@@ -92,8 +92,8 @@ export class LiquidationDetailComponent extends AppComponentBase implements Afte
     init(): void {
         //get params từ url để thực hiện filter
         this._activatedRoute.params.subscribe((params: Params) => {
-            this.liquidationdetailName = params['name'] || '';
-            this.reloadList(this.liquidationdetailName, null);
+            this.LiquidationID = params['LiquidationID'] || '';
+            this.reloadList(this.LiquidationID, null);
         });
     }
 
@@ -103,7 +103,7 @@ export class LiquidationDetailComponent extends AppComponentBase implements Afte
 
     applyFilters(): void {
         //truyền params lên url thông qua router
-        this.reloadList(this.liquidationdetailName, null);
+        this.reloadList(this.LiquidationID, null);
 
         if (this.paginator.getPage() !== 0) {
             this.paginator.changePage(0);

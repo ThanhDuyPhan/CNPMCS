@@ -27,8 +27,8 @@
                     </div>
                     <div class="form-group">
                         <label>Giá tiền thanh lý *</label>
-                        <input #addressInput="ngModel" class="form-control" type="text" name="LiquidationPrice"
-                            [(ngModel)]="liquidationdetail.liquidationPrice" required maxlength="64">
+                        <input #addressInput="ngModel" class="form-control" type="number" name="LiquidationPrice"
+                            [(ngModel)]="liquidationdetail.liquidationPrice" required>
                         <validation-messages [formCtrl]="liquidationPriceInput"></validation-messages>
                     </div>
                     <div class="form-group">

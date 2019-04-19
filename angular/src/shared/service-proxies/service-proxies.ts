@@ -12005,8 +12005,14 @@ export class AssetDto implements IAssetDto {
         data["providerID"] = this.providerID;
         data["serialNumber"] = this.serialNumber;
         data["status"] = this.status;
+        if (!moment.isMoment(this.purchaseDate)) //moment() instanceof moment 
+            this.purchaseDate = moment(this.purchaseDate);
         data["purchaseDate"] = this.purchaseDate ? this.purchaseDate.toISOString() : <any>undefined;
+        if (!moment.isMoment(this.warrantyEndDate)) //moment() instanceof moment 
+            this.warrantyEndDate = moment(this.warrantyEndDate);
         data["warrantyEndDate"] = this.warrantyEndDate ? this.warrantyEndDate.toISOString() : <any>undefined;
+        if (!moment.isMoment(this.liquidationDate)) //moment() instanceof moment 
+            this.liquidationDate = moment(this.liquidationDate);
         data["liquidationDate"] = this.liquidationDate ? this.liquidationDate.toISOString() : <any>undefined;
         data["purchasePrice"] = this.purchasePrice;
         data["annualDepreciationRate"] = this.annualDepreciationRate;
@@ -12101,8 +12107,14 @@ export class AssetInput implements IAssetInput {
         data["providerID"] = this.providerID;
         data["serialNumber"] = this.serialNumber;
         data["status"] = this.status;
+        if (!moment.isMoment(this.purchaseDate)) //moment() instanceof moment 
+            this.purchaseDate = moment(this.purchaseDate);
         data["purchaseDate"] = this.purchaseDate ? this.purchaseDate.toISOString() : <any>undefined;
+        if (!moment.isMoment(this.warrantyEndDate)) //moment() instanceof moment 
+            this.warrantyEndDate = moment(this.warrantyEndDate);
         data["warrantyEndDate"] = this.warrantyEndDate ? this.warrantyEndDate.toISOString() : <any>undefined;
+        if (!moment.isMoment(this.liquidationDate)) //moment() instanceof moment 
+            this.liquidationDate = moment(this.liquidationDate);
         data["liquidationDate"] = this.liquidationDate ? this.liquidationDate.toISOString() : <any>undefined;
         data["purchasePrice"] = this.purchasePrice;
         data["annualDepreciationRate"] = this.annualDepreciationRate;
@@ -12195,8 +12207,14 @@ export class AssetForViewDto implements IAssetForViewDto {
         data["providerID"] = this.providerID;
         data["serialNumber"] = this.serialNumber;
         data["status"] = this.status;
+        if (!moment.isMoment(this.purchaseDate)) //moment() instanceof moment 
+            this.purchaseDate = moment(this.purchaseDate);
         data["purchaseDate"] = this.purchaseDate ? this.purchaseDate.toISOString() : <any>undefined;
+        if (!moment.isMoment(this.warrantyEndDate)) //moment() instanceof moment 
+            this.warrantyEndDate = moment(this.warrantyEndDate);
         data["warrantyEndDate"] = this.warrantyEndDate ? this.warrantyEndDate.toISOString() : <any>undefined;
+        if (!moment.isMoment(this.liquidationDate)) //moment() instanceof moment 
+            this.liquidationDate = moment(this.liquidationDate);
         data["liquidationDate"] = this.liquidationDate ? this.liquidationDate.toISOString() : <any>undefined;
         data["purchasePrice"] = this.purchasePrice;
         data["annualDepreciationRate"] = this.annualDepreciationRate;
@@ -16628,6 +16646,8 @@ export class LiquidationDto implements ILiquidationDto {
         data = typeof data === 'object' ? data : {};
         data["liquidatorName"] = this.liquidatorName;
         data["contractCode"] = this.contractCode;
+        if (!moment.isMoment(this.date)) //moment() instanceof moment 
+            this.date = moment(this.date);
         data["date"] = this.date ? this.date.toISOString() : <any>undefined;
         data["totalAsset"] = this.totalAsset;
         data["totalPrice"] = this.totalPrice;
@@ -16684,6 +16704,8 @@ export class LiquidationInput implements ILiquidationInput {
         data = typeof data === 'object' ? data : {};
         data["liquidatorName"] = this.liquidatorName;
         data["contractCode"] = this.contractCode;
+        if (!moment.isMoment(this.date)) //moment() instanceof moment 
+            this.date = moment(this.date);
         data["date"] = this.date ? this.date.toISOString() : <any>undefined;
         data["totalAsset"] = this.totalAsset;
         data["totalPrice"] = this.totalPrice;
@@ -16738,6 +16760,8 @@ export class LiquidationForViewDto implements ILiquidationForViewDto {
         data = typeof data === 'object' ? data : {};
         data["liquidatorName"] = this.liquidatorName;
         data["contractCode"] = this.contractCode;
+        if (!moment.isMoment(this.date)) //moment() instanceof moment 
+            this.date = moment(this.date);
         data["date"] = this.date ? this.date.toISOString() : <any>undefined;
         data["totalAsset"] = this.totalAsset;
         data["totalPrice"] = this.totalPrice;

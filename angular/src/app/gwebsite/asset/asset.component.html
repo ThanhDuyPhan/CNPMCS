@@ -114,7 +114,9 @@
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Tình trạng</span>
-                                        <span title="1">{{truncateString(record.status)}}</span>
+                                        <span *ngIf="record.status == 1" title="{{record.status}}">Tốt</span>
+                                        <span *ngIf="record.status == 2" title="{{record.status}}">Hỏng</span>
+                                        <span *ngIf="record.status == 3" title="{{record.status}}">Đã thanh lý</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày mua tài sản</span>
