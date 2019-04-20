@@ -120,15 +120,15 @@
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày mua tài sản</span>
-                                        <span title="{{record.purchaseDate}}">{{truncateString(record.purchaseDate)}}</span>
+                                        <span title="{{record.purchaseDate}}">{{truncateString(record.purchaseDate.format("DD/MM/YYYY"))}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày kết thúc bảo hành</span>
-                                        <span title="{{record.warrantyEndDate}}">{{truncateString(record.warrantyEndDate)}}</span>
+                                        <span title="{{record.warrantyEndDate}}">{{truncateString(record.warrantyEndDate.format("DD/MM/YYYY"))}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Ngày thanh lý</span>
-                                        <span title="{{record.liquidationDate}}">{{truncateString(record.liquidationDate)}}</span>
+                                        <span title="{{record.liquidationDate}}">{{truncateString(record.liquidationDate.format("DD/MM/YYYY"))}}</span>
                                     </td>
                                     <td>
                                         <span class="ui-column-title">Giá trị đầu tiên</span>

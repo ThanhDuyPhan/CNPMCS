@@ -1,5 +1,5 @@
 <div bsModal #createOrEditModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
-aria-labelledby="createOrEditModal" aria-hidden="true" [config]="{backdrop: 'static'}">
+    aria-labelledby="createOrEditModal" aria-hidden="true" [config]="{backdrop: 'static'}">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <form #editForm="ngForm" novalidate (ngSubmit)="save()">
@@ -39,8 +39,9 @@ aria-labelledby="createOrEditModal" aria-hidden="true" [config]="{backdrop: 'sta
                     </div>
                     <div class="form-group">
                         <label>Tình trạng *</label>
-                        
-                        <select #noteInput="ngModel" required [(ngModel)]='asset.status' class='form-control' name="Status">
+
+                        <select #noteInput="ngModel" required [(ngModel)]='asset.status' class='form-control'
+                            name="Status">
                             <option value='1'>Tốt</option>
                             <option value='2'>Hỏng</option>
                             <option value='3'>Đã thanh lý</option>
@@ -64,7 +65,7 @@ aria-labelledby="createOrEditModal" aria-hidden="true" [config]="{backdrop: 'sta
                     </div>
                     <div class="form-group">
                         <label>Ngày thanh lý</label>
-                        <input #noteInput="ngModel" class="form-control" type="date" name="LiquidationDate"
+                        <input disabled #noteInput="ngModel" class="form-control" type="date" name="LiquidationDate"
                             [(ngModel)]="asset.liquidationDate" maxlength="64">
                         <validation-messages [formCtrl]="liquidationDateInput"></validation-messages>
                     </div>
@@ -82,7 +83,7 @@ aria-labelledby="createOrEditModal" aria-hidden="true" [config]="{backdrop: 'sta
                     </div>
                     <div class="form-group">
                         <label>Giá trị còn lại</label>
-                        <input #noteInput="ngModel" class="form-control" type="number" name="ResidualPrice"
+                        <input disabled #noteInput="ngModel" class="form-control" type="number" name="ResidualPrice"
                             [(ngModel)]="asset.residualPrice">
                         <validation-messages [formCtrl]="residualPriceInput"></validation-messages>
                     </div>
